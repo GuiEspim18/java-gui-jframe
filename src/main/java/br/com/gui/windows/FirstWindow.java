@@ -13,7 +13,7 @@ public class FirstWindow extends JFrame {
         add(label);
     }
 
-    public void run() {
+    public void open() {
         SwingUtilities.invokeLater(() -> {
             FirstWindow window =  new FirstWindow();
             window.setVisible(true);
