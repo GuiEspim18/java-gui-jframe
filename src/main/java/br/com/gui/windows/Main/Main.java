@@ -1,5 +1,6 @@
 package br.com.gui.windows.Main;
 
+import br.com.gui.components.buttons.SubmitButton.SubmitButton;
 import br.com.gui.windows.Login.Login;
 
 import javax.swing.*;
@@ -20,29 +21,22 @@ public class Main extends JFrame {
         this.panel.setLayout(new BorderLayout());
         setContentPane(this.panel);
 
-        JButton register = new JButton("Register");
-        register.setPreferredSize(new Dimension(100, 20));
+        SubmitButton register = new SubmitButton("Register");
+        register.setPreferredSize(new Dimension(120, 30));
 
-        register.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                JOptionPane.showMessageDialog(Main.this, "Open the register page");
-            }
+        register.onClick(() -> {
+
         });
 
-        JButton login = new JButton("Login");
-        login.setPreferredSize(new Dimension(100, 20));
+        SubmitButton login = new SubmitButton("Login");
+        login.setPreferredSize(new Dimension(120, 30));
 
-        login.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-//                openLogin();
-                JOptionPane.showMessageDialog(Main.this, "Open the login page");
-            }
+        login.onClick(() -> {
+
         });
 
 
-        JPanel buttonPanel = new JPanel();
+        JPanel buttonPanel = new JPanel(new FlowLayout());
         buttonPanel.add(register);
         buttonPanel.add(login);
 
